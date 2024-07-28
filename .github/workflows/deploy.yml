@@ -26,7 +26,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: your-docker-username/sachinkali-wisecow:latest
+        tags: sachinkali/wisecow:latest
 
   deploy:
     runs-on: ubuntu-latest
