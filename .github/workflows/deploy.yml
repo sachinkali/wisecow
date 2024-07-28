@@ -41,38 +41,7 @@ jobs:
         version: v1.18.0
 
     - name: Set up Kubeconfig
-      run: echo "${{ secrets.apiVersion: v1
-clusters:
-- cluster:
-    certificate-authority: /home/kali/.minikube/ca.crt
-    extensions:
-    - extension:
-        last-update: Sun, 28 Jul 2024 15:58:23 IST
-        provider: minikube.sigs.k8s.io
-        version: v1.33.1
-      name: cluster_info
-    server: https://192.168.49.2:8443
-  name: minikube
-contexts:
-- context:
-    cluster: minikube
-    extensions:
-    - extension:
-        last-update: Sun, 28 Jul 2024 15:58:23 IST
-        provider: minikube.sigs.k8s.io
-        version: v1.33.1
-      name: context_info
-    namespace: default
-    user: minikube
-  name: minikube
-current-context: minikube
-kind: Config
-preferences: {}
-users:
-- name: minikube
-  user:
-    client-certificate: /home/kali/.minikube/profiles/minikube/client.crt
-    client-key: /home/kali/.minikube/profiles/minikube/client.key }}" > $HOME/.kube/config
+      run: echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
 
     - name: Deploy to Kubernetes
       run: |
